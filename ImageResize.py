@@ -5,11 +5,12 @@ from PIL import ImageFilter
 from PIL import Image
 
 dest_path = pathlib.Path().resolve()
-isSuccessful = False
+successful = False
 
 if len(sys.argv) > 1:
     for i in range(1, len(sys.argv)):
-
+        
+        # Fetch image from ARGV list
         image = Image.open(sys.argv[i])
         print("current image size: ", image.size)
 
@@ -19,7 +20,8 @@ if len(sys.argv) > 1:
         print("new image size: ", resized_image.size)
         resized_image.filter(ImageFilter.SHARPEN)
         print("Sharpened")
-
+        
+        # Save image to user's current working directory
         resized_image.save(os.path.join(dest_path, image.filename))
 
         image.close()
@@ -30,6 +32,6 @@ else:
     print("ERROR: Please open this tool with an image")
     os.system("pause")
 
-if isSuccessful:
+if successful:
     print("Done!")
     os.system("pause")
