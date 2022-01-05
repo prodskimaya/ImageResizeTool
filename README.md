@@ -19,4 +19,18 @@ There are multiple ways to use the ImageResize Tool. If you don't use the tool m
 Does the program not function correctly or is an error is printed in the console? Please open an **Issue Card** so we can fix it ASAP!
 
 ## Stuff for Nerds
-The ImageResize Tool was written in Python 3.8 using Pycharm by Jetbrains. The tool resizes images by multiplying the images width and height by 10. Feel free to browse the source code 
+The ImageResize Tool was written in Python 3.8 using Pycharm by Jetbrains.
+PyInstaller is used to convert the tool to an .exe file
+
+### ImageResize Python requirements
+1. Python 3.8 or later
+2. Pillow `pip install Pillow`
+3. PyInstaller `pip install pyinstaller`
+
+### How to Build ImageResize
+1. Run this command:
+```
+  pyinstaller --onefile ImageResize.py
+```
+2. Zip-up the **dist** folder
+3. Distribute!
