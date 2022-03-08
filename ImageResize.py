@@ -26,7 +26,8 @@ if len(sys.argv) > 1:
 
         image.close()
         resized_image.close()
-        successful = True
+    
+    successful = True
 
 else:
     print("ERROR: Please open this tool with an image")
